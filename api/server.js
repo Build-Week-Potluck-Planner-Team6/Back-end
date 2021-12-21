@@ -17,7 +17,7 @@ server.use('/api/potlucks', potlucksRouter)
 server.use('/api/foods', foodsRouter)
 
 server.get('/', (req, res, next) => { // eslint-disable-line
-  res.send('<h1>Here\'s the <a href="">README</a></h1>')
+  res.send('<h1>Here\'s the <a href="https://github.com/Build-Week-Potluck-Planner-Team6/Back-end">README</a></h1>')
 })
 
 server.use((err, req, res, next) => { // eslint-disable-line
