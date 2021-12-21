@@ -17,7 +17,7 @@ router.get('/', restricted, (req, res, next) => {
 router.get('/:id', restricted, (req, res, next) => {
   Foods.getFoodById(req.params.id)
     .then(food => {
-      res.json(200).json(food)
+      res.status(200).json(food)
     })
     .catch(next)
 })

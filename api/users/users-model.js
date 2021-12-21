@@ -98,9 +98,6 @@ async function deleteUser(user_id) {
   return deleted
 }
 
-
-
-
 module.exports = {
   add,
   find,
