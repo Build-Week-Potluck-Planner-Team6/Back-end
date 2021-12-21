@@ -20,7 +20,7 @@ server.get('/', (req, res, next) => { // eslint-disable-line
   res.send('<h1>Here\'s the <a href="">README</a></h1>')
 })
 
-server.use((err, req, res, next) => {
+server.use((err, req, res, next) => { // eslint-disable-line
   res.status(err.status || 500).json({
     message: err.message,
     stack: err.stack,
