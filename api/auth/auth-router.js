@@ -5,7 +5,7 @@ const {
   checkUsernameExists
 } = require('./auth-middleware')
 const Users = require('../users/users-model')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const tokenBuilder = require('./token-builder')
 
 router.post('/register', validateBody, checkusernameTaken, (req, res, next) => {
