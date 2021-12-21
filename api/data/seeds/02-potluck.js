@@ -4,7 +4,7 @@ exports.seed = function(knex) {
       return knex('potlucks').insert([
         {
           potluck_name: 'Healthy Food',
-          organizer: '5',
+          organizer: '3',
           potluck_description: 'Fruits, Salad, Proteins',
           potluck_date: '2021/09/15',
           potluck_time: '07:00:00',
@@ -12,7 +12,7 @@ exports.seed = function(knex) {
         },
         {
           potluck_name: 'Food Time',
-          organizer: '2',
+          organizer: '1',
           potluck_description: 'Cake, Cookies, Tarts, IceCream',
           potluck_date: '2021/04/19',
           potluck_time: '02:00:00',
@@ -20,7 +20,7 @@ exports.seed = function(knex) {
         },
         {
           potluck_name: 'DD..Food',
-          organizer: '3',
+          organizer: '5',
           potluck_description: 'Light Summer Food',
           potluck_date: '2021/12/28',
           potluck_time: '07:30:00',
