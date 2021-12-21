@@ -1,20 +1,22 @@
-POTLUCK BACKEND
+#POTLUCK BACKEND
 
 Deployed URL: https://potluckplanner06.herokuapp.com/
 
 API Endpoints
 
------LOGIN and REGISTER-----
+#**-----LOGIN and REGISTER-----**
 
 [POST]https://potluckplanner06.herokuapp.com/api/auth/register -- creates a new user
 
-WHAT TO SEND
+##**WHAT TO SEND
+
 {
   "username": "string",
   "password": "string"
 }
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
+
 {
   "username": "string",
   "user_id": "integer"
@@ -22,14 +24,14 @@ WHAT YOU GET BACK
 
 [POST] https://potluckplanner06.herokuapp.com/api/auth/login -- logs in an existing user
 
-WHAT TO SEND
+##**WHAT TO SEND
 
 {
   "username": "string",
   "password": "string"
 }
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 {
   "message": "Welcome back username",
@@ -38,11 +40,11 @@ WHAT YOU GET BACK
   "token": "TOKEN"
 }
 
------USERS-----
+#**-----USERS-----**
 
 [GET] https://potluckplanner06.herokuapp.com/api/users -- gets list of users
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 [
 {
@@ -61,7 +63,7 @@ WHAT YOU GET BACK
 
 [GET] https://potluckplanner06.herokuapp.com/api/users/:id -- gets user by ID
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 {
   "user_id": 1,
@@ -70,7 +72,7 @@ WHAT YOU GET BACK
 
 [GET] https://potluckplanner06.herokuapp.com/api/users/:id/potlucks -- gets all the potlucks a user has been invited to
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 {
   "user_id": "8",
@@ -101,7 +103,7 @@ WHAT YOU GET BACK
 
 [GET] https://potluckplanner06.herokuapp.com/api/users/:organizer_id/organizer_potlucks -- gets all the potlucks a user has created
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 [
 {
@@ -130,25 +132,25 @@ WHAT YOU GET BACK
 
 [PUT] https://potluckplanner06.herokuapp.com/api/users/:id -- edit existing user
 
-WHAT TO SEND
+##**WHAT TO SEND
 
 {
   "username": "string",
   "password": "string"
 }
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 {
   "user_id": 1,
   "username": "ABC"
 }
 
------POTLUCKS-----
+#**-----POTLUCKS-----**
 
 [GET] https://potluckplanner06.herokuapp.com/api/potlucks -- get an array of potlucks
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 [
   {
@@ -182,7 +184,7 @@ WHAT YOU GET BACK
 
 [GET] https://potluckplanner06.herokuapp.com/api/potlucks/:id -- gets potluck by ID
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 {
   "potluck_id": 3,
@@ -198,7 +200,7 @@ WHAT YOU GET BACK
 
 [GET] https://potluckplanner06.herokuapp.com/api/potlucks/:id/users -- gets the users for a specific potluck
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 {
   "potluck_id": 2,
@@ -226,7 +228,7 @@ WHAT YOU GET BACK
 
 [GET] https://potluckplanner06.herokuapp.com/api/potlucks/:id/foods -- gets the foods for a specific potluck
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 {
   "potluck_id": 3,
@@ -251,7 +253,7 @@ WHAT YOU GET BACK
 
 [POST] https://potluckplanner06.herokuapp.com/api/potlucks/:id/users -- adds a user to a potluck
 
-WHAT TO SEND
+##**WHAT TO SEND
 
 {
   "potluck_id": 2,
@@ -259,7 +261,7 @@ WHAT TO SEND
   "attending": 1 //0 for not attending, 1 for attending
 }
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 {
   "potluck_id": 2,
@@ -292,14 +294,14 @@ WHAT YOU GET BACK
 
 [POST] https://potluckplanner06.herokuapp.com/api/potlucks/:id/foods -- adds a food item to a potluck
 
-WHAT TO SEND
+##**WHAT TO SEND
 
 {
   "potluck_id": 3,
   "food_id": 2
 }
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 {
   "potluck_id": 3,
@@ -327,7 +329,7 @@ WHAT YOU GET BACK
 
 [POST] https://potluckplanner06.herokuapp.com/api/potlucks -- creates a new potluck
 
-WHAT TO SEND
+##**WHAT TO SEND
 
 {
   "potluck_name": "string",
@@ -338,7 +340,7 @@ WHAT TO SEND
   "organizer": "integer"
 }
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 {
   "potluck_id": 3,
@@ -354,7 +356,7 @@ WHAT YOU GET BACK
 
 [PUT] https://potluckplanner06.herokuapp.com/api/potlucks/:id -- updates an existing potluck
 
-WHAT TO SEND
+##**WHAT TO SEND
 
 {
   "potluck_name": "string",
@@ -365,7 +367,7 @@ WHAT TO SEND
   "organizer": "integer"
 }
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 {
   "potluck_id": 3,
@@ -381,7 +383,7 @@ WHAT YOU GET BACK
 
 [DELETE] https://potluckplanner06.herokuapp.com/api/potlucks/:id -- delete existing potluck
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 {
   "potluck_id": 3,
@@ -397,15 +399,15 @@ WHAT YOU GET BACK
 
 [DELETE] https://potluckplanner06.herokuapp.com/api/potlucks/:potluck_food_id/foods -- delete existing food item in a potluck
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 "successfully removed item"
 
------FOODS-----
+#**-----FOODS-----**
 
 [GET] https://potluckplanner06.herokuapp.com/api/foods -- get an array of all foods
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 [
   {
@@ -427,7 +429,7 @@ WHAT YOU GET BACK
 
 [GET] https://potluckplanner06.herokuapp.com/api/foods/:id -- gets food by ID
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 {
   "food_id": 1,
@@ -437,13 +439,13 @@ WHAT YOU GET BACK
 
 [POST] https://potluckplanner06.herokuapp.com/api/foods -- create new food item
 
-WHAT TO SEND
+##**WHAT TO SEND
 
 {
   "food_name": "Quesadilla",
   "food_description": " optional string"
 }
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 {
   "food_id": 8,
@@ -453,14 +455,14 @@ WHAT YOU GET BACK
 
 [PUT] https://potluckplanner06.herokuapp.com/api/foods/:id -- update existing food item
 
-WHAT TO SEND
+##**WHAT TO SEND
 
 {
   "food_name": "Fajitas",
   "food_description": " optional string"
 }
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 {
   "food_id": 8,
@@ -470,7 +472,7 @@ WHAT YOU GET BACK
 
 [DELETE] https://potluckplanner06.herokuapp.com/api/foods/:id -- delete existing food item
 
-WHAT YOU GET BACK
+##**WHAT YOU GET BACK
 
 {
   "food_id": 8,
