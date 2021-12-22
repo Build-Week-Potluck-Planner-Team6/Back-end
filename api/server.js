@@ -12,9 +12,8 @@ server.use(helmet())
 server.use(express.json())
 
 
-
-server.use('/api/auth', authRouter)
 server.use('/api/users', usersRouter)
+server.use('/api/auth', authRouter)
 server.use('/api/potlucks', potlucksRouter)
 server.use('/api/foods', foodsRouter)
 
