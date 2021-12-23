@@ -16,7 +16,7 @@ function find() {
 function findBy(filter) {
   return db('users AS u')
     .select('user_id', 'username', 'password')
-    .where('username', filter)
+    .where(filter)
     .first()
 }
 
