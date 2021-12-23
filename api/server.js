@@ -7,7 +7,9 @@ const potlucksRouter = require('./potlucks/potlucks-router')
 const foodsRouter = require('./foods/foods-router')
 
 const server = express()
-server.use(cors())
+server.use(cors({
+  origin: '*'
+}))
 server.use(helmet())
 server.use(express.json())
 
